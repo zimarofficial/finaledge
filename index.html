@@ -5,148 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FINAL EDGE - A/L Accounting</title>
 
-<style>
-
-/* RESET */
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f4f7fb;
-  scroll-behavior:smooth;
-}
-
-/* NAV */
-.nav{
-  position:sticky;
-  top:0;
-  background:#1e3c72;
-  color:white;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 20px;
-  z-index:1000;
-  animation:slideDown 0.6s ease;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo img{
-  width:40px;
-  height:40px;
-  border-radius:6px;
-}
-
-.nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
-  font-weight:bold;
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,#1e3c72,#2a5298);
-  color:white;
-  text-align:center;
-  padding:90px 20px;
-  animation:fadeIn 1s ease;
-}
-
-.hero h1{
-  font-size:42px;
-  margin-bottom:10px;
-}
-
-/* BUTTONS */
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:12px 18px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.08);
-}
-
-.green{background:#25D366;color:white;}
-.white{background:white;color:#1e3c72;}
-
-/* SECTIONS */
-.section{
-  padding:60px 20px;
-  text-align:center;
-  opacity:0;
-  transform:translateY(30px);
-  animation:fadeUp 1s forwards;
-}
-
-.section:nth-child(odd){
-  animation-delay:0.2s;
-}
-
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  width:220px;
-  border-radius:10px;
-  box-shadow:0 0 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.08);
-}
-
-/* FOOTER */
-footer{
-  background:#1e3c72;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes slideDown{
-  from{transform:translateY(-50px);opacity:0;}
-  to{transform:translateY(0);opacity:1;}
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero h1{font-size:28px;}
-  .cards{flex-direction:column;align-items:center;}
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -155,10 +14,10 @@ footer{
 <div class="nav">
   <div class="logo">
     <img src="logo.png" alt="logo">
-    <h3>FINAL EDGE</h3>
+    <h2>FINAL EDGE</h2>
   </div>
 
-  <div>
+  <div class="menu">
     <a href="#home">Home</a>
     <a href="#lessons">Lessons</a>
     <a href="#videos">Videos</a>
@@ -167,27 +26,21 @@ footer{
 </div>
 
 <!-- HERO -->
-<div class="hero" id="home">
+<section class="hero" id="home">
   <h1>A/L Accounting 2026 - 2027</h1>
   <p>Learn Smart | Score High | Tamil Medium</p>
 
-  <a class="btn green" href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb" target="_blank">
-    📲 Join WhatsApp Group
+  <a class="btn green" href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb">
+    Join WhatsApp Group
   </a>
 
-  <a class="btn white" href="https://wa.me/94767273183" target="_blank">
-    💬 Private Chat
+  <a class="btn white" href="https://wa.me/94767273183">
+    Private Chat
   </a>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-  <h2>About FINAL EDGE</h2>
-  <p>Simple Tamil Accounting teaching with exam focused learning.</p>
-</div>
+</section>
 
 <!-- LESSONS -->
-<div class="section" id="lessons">
+<section class="section" id="lessons">
   <h2>Lessons</h2>
 
   <div class="cards">
@@ -196,177 +49,30 @@ footer{
     <div class="card">Unit 3</div>
     <div class="card">Past Papers</div>
   </div>
-</div>
+</section>
 
 <!-- VIDEOS -->
-<div class="section" id="videos">
-  <h2>Video Lesson</h2>
+<section class="section" id="videos">
+  <h2>Latest Video</h2>
 
-  <iframe width="320" height="200"
-    src="https://www.youtube.com/embed/"
-    frameborder="0" allowfullscreen>
-  </iframe>
-</div>
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/-hBRX9DbyNg" allowfullscreen></iframe>
+  </div>
+</section>
 
 <!-- CONTACT -->
-<div class="section" id="contact">
+<section class="section" id="contact">
   <h2>Contact</h2>
   <p>Lecturer: ZIMAR</p>
-
-  <a class="btn green" href="https://wa.me/94767273183">
-    WhatsApp Contact
-  </a>
-</div>
+  <p>📞 0767273183</p>
+</section>
 
 <!-- FOOTER -->
 <footer>
   © 2026 FINAL EDGE | A/L Accounting
 </footer>
 
-</body>
-</html>  margin:10px;
-  padding:12px 18px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-.green{background:#25D366;color:white;}
-.white{background:white;color:#1e3c72;}
-
-/* SECTIONS */
-.section{
-  padding:50px 20px;
-  text-align:center;
-}
-
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  width:220px;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.05);
-}
-
-/* FOOTER */
-footer{
-  background:#1e3c72;
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:30px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero h1{font-size:28px;}
-  .cards{flex-direction:column;align-items:center;}
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- NAV -->
-<div class="nav">
-  <div class="logo">
-    <img src="logo.png" alt="FINAL EDGE Logo">
-    <h3>FINAL EDGE</h3>
-  </div>
-
-  <div>
-    <a href="#home">Home</a>
-    <a href="#lessons">Lessons</a>
-    <a href="#videos">Videos</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<div class="hero" id="home">
-  <h1>A/L Accounting 2026 - 2027</h1>
-  <p>Learn Smart | Score High | Tamil Medium Accounting</p>
-
-  <a class="btn green" href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb" target="_blank">
-    📲 Join WhatsApp Group
-  </a>
-
-  <a class="btn white" href="https://wa.me/94767273183" target="_blank">
-    💬 Private Chat
-  </a>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-  <h2>About FINAL EDGE</h2>
-  <p>
-    A/L Accounting made simple in Tamil with exam-focused teaching,
-    past papers and model answers.
-  </p>
-</div>
-
-<!-- LESSONS -->
-<div class="section" id="lessons">
-  <h2>Our Lessons</h2>
-
-  <div class="cards">
-    <div class="card">Unit 1<br>Introduction</div>
-    <div class="card">Unit 2<br>Double Entry</div>
-    <div class="card">Unit 3<br>Final Accounts</div>
-    <div class="card">Past Papers</div>
-  </div>
-</div>
-
-<!-- VIDEOS -->
-<div class="section" id="videos">
-  <h2>Latest Video Lesson</h2>
-
-  <iframe width="320" height="200"
-src="https://www.youtube.com/embed/-hBRX9DbyNg"
-frameborder="0"
-allowfullscreen>
-</iframe>
-  <iframe width="320" height="200"
-    src="https://www.youtube.com/embed/"
-    frameborder="0" allowfullscreen>
-  </iframe>
-
-  <p>Subscribe for more Accounting Lessons</p>
-</div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>Contact Lecturer</h2>
-  <p>MOHAMMETHU ZIMAR</p>
-  <p>📞 0767273183</p>
-
-  <a class="btn green" href="https://wa.me/94767273183" target="_blank">
-    WhatsApp Contact
-  </a>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 FINAL EDGE | A/L Accounting Tamil Medium
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
