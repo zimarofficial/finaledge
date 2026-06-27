@@ -10,16 +10,21 @@ body{
   margin:0;
   font-family:Arial;
   background:#f4f7fb;
+  scroll-behavior:smooth;
 }
 
 /* HEADER */
 header{
+  position:sticky;
+  top:0;
   background:#1e3c72;
   color:white;
-  padding:15px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:12px 20px;
+  z-index:1000;
+  animation:slideDown 0.6s ease;
 }
 
 header img{
@@ -31,7 +36,7 @@ header img{
 header a{
   color:white;
   text-decoration:none;
-  margin-left:10px;
+  margin-left:12px;
   font-weight:bold;
 }
 
@@ -40,21 +45,26 @@ header a{
   background:linear-gradient(135deg,#1e3c72,#2a5298);
   color:white;
   text-align:center;
-  padding:70px 20px;
+  padding:80px 20px;
+  animation:fadeIn 1s ease;
 }
 
 .hero h1{
-  font-size:35px;
+  font-size:38px;
 }
 
-/* BUTTONS */
 .btn{
   display:inline-block;
   margin:10px;
-  padding:10px 16px;
-  border-radius:6px;
+  padding:12px 18px;
+  border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
 }
 
 .green{background:#25D366;color:white;}
@@ -62,17 +72,32 @@ header a{
 
 /* SECTION */
 .section{
-  padding:40px 20px;
+  padding:60px 20px;
   text-align:center;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
 }
 
-/* CARD */
+.section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* CARDS */
 .card{
   background:white;
-  padding:15px;
+  padding:20px;
   margin:10px;
-  border-radius:8px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  display:inline-block;
+  width:180px;
+  border-radius:10px;
+  box-shadow:0 0 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.08);
 }
 
 /* FOOTER */
@@ -80,8 +105,19 @@ footer{
   background:#1e3c72;
   color:white;
   text-align:center;
-  padding:15px;
+  padding:20px;
   margin-top:20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes slideDown{
+  from{transform:translateY(-40px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
 }
 
 /* MOBILE */
@@ -94,7 +130,7 @@ footer{
 
 <body>
 
-<!-- HEADER (ONLY ONE) -->
+<!-- HEADER -->
 <header>
   <div>
     <img src="logo.png" alt="logo">
@@ -111,21 +147,15 @@ footer{
 <!-- HERO -->
 <div class="hero" id="home">
   <h1>A/L Accounting 2026 - 2027</h1>
-  <p>Simple Tamil Accounting Learning</p>
+  <p>Learn Smart | Score High | Tamil Medium</p>
 
-  <a class="btn green" href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb">
-    Join Group
-  </a>
-
-  <a class="btn white" href="https://wa.me/94767273183">
-    Chat
-  </a>
+  <a class="btn green" href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb">Join Group</a>
+  <a class="btn white" href="https://wa.me/94767273183">Chat</a>
 </div>
 
 <!-- LESSONS -->
-<div class="section" id="lessons">
+<div class="section">
   <h2>Lessons</h2>
-
   <div class="card">Unit 1</div>
   <div class="card">Unit 2</div>
   <div class="card">Unit 3</div>
@@ -133,7 +163,7 @@ footer{
 </div>
 
 <!-- VIDEO -->
-<div class="section" id="videos">
+<div class="section">
   <h2>Video Lesson</h2>
 
   <iframe width="320" height="200"
@@ -145,6 +175,20 @@ footer{
 <footer>
   © 2026 FINAL EDGE | A/L Accounting
 </footer>
+
+<script>
+// Scroll animation
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
