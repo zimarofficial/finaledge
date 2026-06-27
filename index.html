@@ -1,194 +1,241 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FINAL EDGE - A/L Accounting</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIMAR x ACCOUNTS - TAMIL</title>
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f4f7fb;
-  scroll-behavior:smooth;
-}
+  <link rel="stylesheet" href="style.css">
 
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  background:#1e3c72;
-  color:white;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 20px;
-  z-index:1000;
-  animation:slideDown 0.6s ease;
-}
-
-header img{
-  width:40px;
-  height:40px;
-  border-radius:6px;
-}
-
-header a{
-  color:white;
-  text-decoration:none;
-  margin-left:12px;
-  font-weight:bold;
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,#1e3c72,#2a5298);
-  color:white;
-  text-align:center;
-  padding:80px 20px;
-  animation:fadeIn 1s ease;
-}
-
-.hero h1{
-  font-size:38px;
-}
-
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:12px 18px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.1);
-}
-
-.green{background:#25D366;color:white;}
-.white{background:white;color:#1e3c72;}
-
-/* SECTION */
-.section{
-  padding:60px 20px;
-  text-align:center;
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
-
-.section.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* CARDS */
-.card{
-  background:white;
-  padding:20px;
-  margin:10px;
-  display:inline-block;
-  width:180px;
-  border-radius:10px;
-  box-shadow:0 0 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.08);
-}
-
-/* FOOTER */
-footer{
-  background:#1e3c72;
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:20px;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@keyframes slideDown{
-  from{transform:translateY(-40px);opacity:0;}
-  to{transform:translateY(0);opacity:1;}
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero h1{font-size:26px;}
-}
-</style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- HEADER -->
-<header>
-  <div>
-    <img src="logo.png" alt="logo">
-    <b>FINAL EDGE</b>
-  </div>
 
+<header class="header">
+  <div class="container nav">
+
+```
+<div class="brand">
+  <img src="logo.png" alt="Logo">
   <div>
-    <a href="#home">Home</a>
-    <a href="#lessons">Lessons</a>
-    <a href="#videos">Videos</a>
+    <h2>ZIMAR x ACCOUNTS</h2>
+    <span>TAMIL</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#recordings">Recordings</a>
+  <a href="#classes">Classes</a>
+  <a href="#contact">Contact</a>
+</nav>
+```
+
   </div>
 </header>
 
 <!-- HERO -->
-<div class="hero" id="home">
-  <h1>A/L Accounting 2026 - 2027</h1>
-  <p>Learn Smart | Score High | Tamil Medium</p>
 
-  <a class="btn green" href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb">Join Group</a>
-  <a class="btn white" href="https://wa.me/94767273183">Chat</a>
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+```
+<h1>ZIMAR x ACCOUNTS - TAMIL</h1>
+
+<p class="hero-sub">
+  Advance Level Tamil Medium Accounting Classes
+</p>
+
+<div class="hero-buttons">
+  <a class="btn btn-primary"
+     href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb?mode=gi_t"
+     target="_blank">
+     Join WhatsApp Group
+  </a>
+
+  <a class="btn btn-outline"
+     href="#recordings">
+     Watch Free Classes
+  </a>
 </div>
+```
 
-<!-- LESSONS -->
-<div class="section">
-  <h2>Lessons</h2>
-  <div class="card">Unit 1</div>
-  <div class="card">Unit 2</div>
-  <div class="card">Unit 3</div>
-  <div class="card">Past Papers</div>
+  </div>
+
+</section>
+
+<!-- HOME INTRO -->
+
+<section class="section reveal">
+
+  <div class="container">
+
+```
+<h2 class="section-title">
+  🎓 நீங்கள் உயர்தரத்தில் வணிகப்பிரிவில் கணக்கீட்டு பாடத்தினை தெரிவு செய்த மாணவரா?
+</h2>
+
+<p class="intro-text">
+  அப்படியானால் இது உங்களுக்கு ஒரு சிறந்த வாய்ப்பு.
+  கணக்கீட்டு பாடத்தில் உள்ள அனைத்து தேர்ச்சிகளையும் சிறந்த முறையில்
+  கற்பித்து உங்களை பரீட்சைக்கு சிறந்த முறையில் தயார்படுத்த நாம் தயார்.
+  எம்மோடு இணைந்து கொண்டு உங்களின் சிறந்த பெறுபேற்றினை
+  உறுதிப்படுத்திக் கொள்ளுங்கள்.
+</p>
+```
+
+  </div>
+
+</section>
+
+<!-- FREE RECORDINGS -->
+
+<section class="section dark-section reveal" id="recordings">
+
+  <div class="container">
+
+```
+<h2 class="section-title">
+  🎥 Our Free Classes Are Here
+</h2>
+
+<p class="section-subtitle">
+  Check our previous class recordings for free.
+</p>
+
+<div class="video-grid">
+
+  <div class="video-card">
+    <iframe
+      src="https://www.youtube.com/embed/OVhBwSa5O60"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="video-card">
+    <iframe
+      src="https://www.youtube.com/embed/r34xdzHNAgs"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="video-card">
+    <iframe
+      src="https://www.youtube.com/embed/V01MgFYlB2Q"
+      allowfullscreen>
+    </iframe>
+  </div>
+
 </div>
+```
 
-<!-- VIDEO -->
-<div class="section">
-  <h2>Video Lesson</h2>
+  </div>
 
-  <iframe width="320" height="200"
-  src="https://www.youtube.com/embed/-hBRX9DbyNg"
-  frameborder="0" allowfullscreen></iframe>
+</section>
+
+<!-- CLASSES -->
+
+<section class="section reveal" id="classes">
+
+  <div class="container">
+
+```
+<h2 class="section-title">
+  Zoom Live Classes For A/L Accounting Tamil Medium
+</h2>
+
+<p class="center-text">
+  👉 கணக்கீட்டு பாடத்தில் உள்ள அலகுகள், கஷ்டம் என்று கூறும் மாணவர்கள்
+  கூட கணக்கீட்டு பாடத்தை ஓர் இலகுவான பாடம் என்று கூறும் அளவிற்கு
+  சிறந்த முறையில் கற்பிக்கப்படும்.
+</p>
+
+<div class="feature-grid">
+
+  <div class="feature-card">
+    <h3>📚 Complete Coverage</h3>
+    <p>
+      All syllabus units covered before exams with detailed explanations.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📄 Past Papers</h3>
+    <p>
+      Detailed analysis of previous exam questions and model answers.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>🎥 Recordings</h3>
+    <p>
+      Access to all class recordings for revision.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>💬 Doubt Support</h3>
+    <p>
+      24/7 WhatsApp support for immediate clarification.
+    </p>
+  </div>
+
 </div>
+```
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact-section reveal" id="contact">
+
+  <div class="container">
+
+```
+<h2 class="section-title">Contact</h2>
+
+<p class="contact-name">
+  M.N.M. Zimar
+</p>
+
+<p class="contact-phone">
+  📞 0767273183
+</p>
+
+<a class="btn btn-primary"
+   href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb?mode=gi_t"
+   target="_blank">
+   Join WhatsApp Group
+</a>
+```
+
+  </div>
+
+</section>
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp-float"
+href="https://chat.whatsapp.com/IeXijrdITNM3JcZtlKkaeb?mode=gi_t"
+target="_blank">
+💬 </a>
 
 <!-- FOOTER -->
-<footer>
-  © 2026 FINAL EDGE | A/L Accounting
+
+<footer class="footer">
+  © 2026 ZIMAR x ACCOUNTS - TAMIL | A/L Accounting
 </footer>
 
-<script>
-// Scroll animation
-const sections = document.querySelectorAll('.section');
-
-window.addEventListener('scroll', () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      sec.classList.add('show');
-    }
-  });
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
